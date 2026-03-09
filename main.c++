@@ -12,6 +12,7 @@ int main()
     while(true){
         int i;
         printf("1. put data\n");
+        printf("2. get data\n");
         printf("choice: ");
         scanf("%d", &i);
         switch(i){
@@ -24,7 +25,11 @@ int main()
                 // printf("head: %d\n", rb.head);
                 // printf("count: %d\n", rb.count);
                 break;
-
+            case 2:
+                // printf("get %d at count: %d\n", rb.buffer[rb.head], rb.count);
+                ring_buffer_get(&rb);
+                // printf("head now %d, count now %d\n", rb.head, rb.count);
+                break;
         }
     }
     return 0;
