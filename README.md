@@ -12,8 +12,8 @@ Thuật toán được triển khai trên mảng với các thao tác:
 ### 2.Thêm dữ liệu
 - Khi thêm dữ liệu Tail sẽ tăng lên 1. Khi count(số phần tử đang có trong rb) bằng với kích thước size(số phần tử tối đa trong rb) Tail sẽ quay về vị trí đầu tiên của rb và dữ liệu mới sẽ ghi đè lên dữ liệu cũ nếu có. Ví dụ khi rb tối đa có size = 8 và có 7 giá trị (count=7) và tail=8(do là vị trí thêm phần tử vào). Khi thêm phần tử vào count=8, tail=0 và tiếp tục thêm tail=1, head=1(do dữ liệu cũ bị ghi đè).  
 ### 3.Lấy dữ liệu
-- Khi lấy dữ liệu head sẽ tăng lên 1 và tương tự như lấy dữ liệu khi head=7 mà ta lấy dữ liệu thì head=0;
+- Khi lấy dữ liệu head sẽ tăng lên 1 và tương tự như thêm dữ liệu khi head=7 mà ta lấy dữ liệu thì head=0.
 ### 4.Kiểm tra rb 
-
+- Kiểm tra số phần tử có trong trong rb.
 
 

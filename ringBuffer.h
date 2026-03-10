@@ -22,8 +22,8 @@ void ring_buffer_put(ring_buffer_char_t *rb, uint8_t data);
 
 // lấy dữ liệu
 void ring_buffer_get(ring_buffer_char_t *rb);
-// kiểm tra buffer rỗng
 
-// kiểm tra buffer đầy
+// kiểm tra buffer 
+void ring_buffer_check(ring_buffer_char_t *rb);
 
 #endif

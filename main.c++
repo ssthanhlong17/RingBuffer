@@ -13,6 +13,8 @@ int main()
         int i;
         printf("1. put data\n");
         printf("2. get data\n");
+        printf("3. check element in buffer\n");
+        printf("4. exit\n");
         printf("choice: ");
         scanf("%d", &i);
         switch(i){
@@ -30,6 +32,11 @@ int main()
                 ring_buffer_get(&rb);
                 // printf("head now %d, count now %d\n", rb.head, rb.count);
                 break;
+            case 3:
+                ring_buffer_check(&rb);
+                break;
+            case 4:
+                return 0;
         }
     }
     return 0;

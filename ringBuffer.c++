@@ -22,14 +22,29 @@ void ring_buffer_put(ring_buffer_char_t *rb, uint8_t data) //tail tăng đến s
     }
 }
 
-void ring_buffer_get(ring_buffer_char_t *rb) //head tăng đến size thì quay về 0, count giam sau mỗi lần gọi
+void ring_buffer_get(ring_buffer_char_t *rb) //head tăng đến size thì quay về 0, count giảm sau mỗi lần gọi
 {
     if(rb->count == 0){
         printf("buffer is empty\n");
     }
     else{
         rb->head = (rb->head + 1) % rb->size;
-        rb->count - 1;
+        rb->count -= 1;
     }
 }
 
+void ring_buffer_check(ring_buffer_char_t *rb) //kiểm tra buffer rỗng, đầy hay có phần tử
+{
+    if(rb->count == 0)
+    {
+        printf("buffer is empty\n");
+    }
+    else if(rb->count == rb->size)
+    {
+        printf("buffer is full\n");
+    }
+    else
+    {
+        printf("buffer has %d elements\n", rb->count);
+    }
+}
